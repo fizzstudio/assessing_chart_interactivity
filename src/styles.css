@@ -1,0 +1,7 @@
+#line-insert {
+    display: inline-block;
+}
+
+#sparkline .line-legend, #sparkline h2, #sparkline p {
+    display: none !important;
+}
