@@ -1,0 +1,20 @@
+{
+  "name": "assessing-chart-interactivity",
+  "author": "Frank Elavsky",
+  "version": "0.0.1",
+  "keywords": [
+    "visualization",
+    "accessibility"
+  ],
+  "description": "A repository for experimental environments where we intend to test assistive technology user experience with complex static and interactive charts and graphs.",
+  "scripts": {
+    "build": "webpack",
+    "prettier-all-check": "prettier --config  ./.prettierrc --ignore ./.prettierignore --debug-check \"**/*.{js,jsx,ts,tsx,html,jsx,json,css,scss,md}\"",
+    "prettier-all": "prettier --config  ./.prettierrc --ignore ./.prettierignore --write \"**/*.{js,jsx,ts,tsx,html,jsx,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "prettier": "^2.6.2",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
