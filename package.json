@@ -12,6 +12,7 @@
     "prettier-all": "prettier --config  ./.prettierrc --ignore ./.prettierignore --write \"**/*.{js,jsx,ts,tsx,html,jsx,json,css,scss,md}\""
   },
   "dependencies": {
+    "@visa/charts": "^6.1.0",
     "prettier": "^2.6.2"
   }
 }

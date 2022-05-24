@@ -1,13 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
   <head>
     <meta charset="utf-8" />
     <title>Assessing Chart Interactivity</title>
     <link href="src/styles.css" rel="stylesheet">
   </head>
   <body>
-    <p>With the current sales trends <span id="line-insert"></span> it may make sense to reconsider our priorities for next quarter</p>
-    <script src="https://unpkg.com/@visa/line-chart@5.1.0/dist/line-chart/line-chart.js?module"></script>
+    <header>
+      <nav>
+        <h2>Environments</h2>
+        <p>Load chart only once ready to evaluate:</p>
+        <input type="radio" id="c1" name="chart" value="First" class="input-selector">
+        <label for="c1">First Chart</label><br>
+        <input type="radio" id="c2" name="chart" value="Second" class="input-selector">
+        <label for="c2">Second Chart</label><br>
+        <input type="radio" id="c3" name="chart" value="Third" class="input-selector">
+        <label for="c3">Third Chart</label><br>
+        <input type="radio" id="c4" name="chart" value="Fourth" class="input-selector">
+        <label for="c4">Fourth Chart</label><br>
+        <input type="radio" id="c5" name="chart" value="Fifth" class="input-selector">
+        <label for="c5">Fifth Chart</label><br>
+      </nav>
+    </header>
+    <main>
+      <h1>Fizz Studio: Assessing Chart Interactivity</h1>
+      <p>This small test environment is intended to be used to help evaluate access barriers in online, interactive charts and graphs. We are evaluating a series of interactive charts and graphs with various assistive technologies and native users.</p>
+      <p>These environments are set up so that participants can help us evaluate the usability of these charts and graphs, they are not intended to test the individual abilities of our participants.</p>
+      <p>The following section is where our test chart will render. These tests may be changed by choosing an option in the previous Environments nav menu.</p>
+      <p>When we are ready to begin evaluating, please select First Chart in the previous Environments menu.</p>
+      <div id="chart1" class="hidden environment">
+        <div class="environment-instructions">
+          <h2>Tasks:</h2>
+          <ol>
+            <li>Which month had the highest total sign-ups?</li>
+            <li>What product had the lowest number of sign-ups on any given month and what was the month?</li>
+            <li>What product had the highest number of sign-ups on any given month and what was the month?</li>
+          </ol>
+        </div>
+        <div class="insert"></div>
+      </div>
+      <div id="chart2" class="hidden environment">
+        <div class="environment-instructions">
+          <h2>Tasks:</h2>
+          <ol>
+            <li>What is the trend of each line?</li>
+            <li>At what month did one line overtake the other?</li>
+          </ol>
+        </div>
+        <div class="insert"></div>
+      </div>
+      <div id="chart3" class="hidden environment">
+        <div class="environment-instructions">
+          <h2>Tasks:</h2>
+          <ol>
+            <li>Which product had the highest and lowest value in the Northeast Region in 2020?</li>
+            <li>Which product had the highest and lowest value in the Northeast Region in 2016?</li>
+          </ol>
+          <div>
+            <h3>Select a year:</h3>
+            <input type="radio" id="y13" name="year3" value="2020" class="year-selector" checked>
+            <label for="y13">2020</label><br>
+            <input type="radio" id="y23" name="year3" value="2016" class="year-selector">
+            <label for="y23">2016</label>
+          </div>
+        </div>
+        <div class="insert"></div>
+      </div>
+      <div id="chart4" class="hidden environment">
+        <div class="environment-instructions">
+          <h2>Tasks:</h2>
+          <ol>
+            <li>Select the cell with the highest value.</li>
+            <li>What does the information say under the chart after the highest value has been selected?</li>
+          </ol>
+        </div>
+        <div class="insert"></div>
+        <div class="announcement">
+          <h2>Data Output Area</h2>
+          <p>When a selection has been made in the heatmap, it will be recorded here:</p>
+          <span id="aria-live" aria-live="polite">No selection has been made.</span>
+        </div>
+      </div>
+      <div id="chart5" class="hidden environment">
+        <div class="environment-instructions">
+          <h2>Tasks:</h2>
+          <ol>
+            <li>What is the direction of the trend that is mentioned in the executive report below?</li>
+          </ol>
+        </div>
+        <br>
+        <h2>Executive report:</h2>
+        <p>With the current sales trends <span id="line-insert" class="insert"></span> it may make sense to reconsider our priorities for next quarter</p>
+      </div>
+    </main>
+    <script src="./node_modules/@visa/charts/dist/charts/charts.js"></script>
     <script src="src/charts.js"></script>
   </body>
 </html>
