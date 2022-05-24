@@ -39,6 +39,12 @@ const years = {
   ]
 };
 
+const sparklineFix = (d) => {
+    document.getElementById('sparkline').querySelectorAll('circle').forEach(circle => {
+        circle.removeAttribute('tabindex')
+        circle.setAttribute('aria-hidden','true')
+    })
+}
 const heatClick = d => {
   d.target.clickHighlight =
     d.target.clickHighlight && d.target.clickHighlight[0] === d.detail.data ? [] : [d.detail.data];
@@ -298,7 +304,8 @@ const props = {
       keyboardNavConfig: { disabled: true },
       hideDataTableButton: true,
       elementsAreInterface: false,
-      disableValidation: true
+      disableValidation: true,
+      onChangeFunc: sparklineFix
     }
   }
 };
