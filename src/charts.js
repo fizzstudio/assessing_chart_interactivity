@@ -39,6 +39,12 @@ const years = {
   ]
 };
 
+const sparklineFix = (d) => {
+    document.getElementById('sparkline').querySelectorAll('circle').forEach(circle => {
+        circle.removeAttribute('tabindex')
+        circle.setAttribute('aria-hidden','true')
+    })
+}
 const heatClick = d => {
   d.target.clickHighlight =
     d.target.clickHighlight && d.target.clickHighlight[0] === d.detail.data ? [] : [d.detail.data];
@@ -75,7 +81,7 @@ const props = {
       elementDescriptionAccessor: 'Note',
       executiveSummary: 'Product E is the Highest Value, F is the Lowest.',
       statisticalNotes: 'Chart is sorted in descending order.',
-      disableValidation: false
+      disableValidation: true
     }
   },
   'line-chart': {
@@ -121,7 +127,7 @@ const props = {
     dataLabel: { visible: true, placement: 'auto' },
     accessibility: {
       elementDescriptionAccessor: 'Note',
-      disableValidation: false
+      disableValidation: true
     }
   },
   'stacked-bar-chart': {
@@ -210,7 +216,7 @@ const props = {
     clickStyle: { strokeWidth: '3px' },
     accessibility: {
       executiveSummary: 'Product C has the highest approval rate correlation with the user group MSA > 200k.',
-      disableValidation: false
+      disableValidation: true
     }
   },
   sparkline: {
@@ -298,7 +304,8 @@ const props = {
       keyboardNavConfig: { disabled: true },
       hideDataTableButton: true,
       elementsAreInterface: false,
-      disableValidation: false
+      disableValidation: true,
+      onChangeFunc: sparklineFix
     }
   }
 };
