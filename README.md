@@ -5,8 +5,7 @@ A repository for experimental environments where we intend to test assistive tec
 ## Development
 
 We use the following environmental variables:
-node v17.4.0
-yarn 1.22.17
+node v14.19.1
 
 - Clone the repo
 - run `yarn` to set things up
