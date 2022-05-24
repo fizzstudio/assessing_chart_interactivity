@@ -7,9 +7,9 @@
     "accessibility"
   ],
   "description": "A repository for experimental environments where we intend to test assistive technology user experience with complex static and interactive charts and graphs.",
-  "engines" : { 
-    "npm" : "^6.14.16",
-    "node" : "^14.19.1"
+  "engines": {
+    "npm": "^6.14.16",
+    "node": "^14.19.1"
   },
   "scripts": {
     "prettier-all-check": "prettier --config  ./.prettierrc --ignore ./.prettierignore --debug-check \"**/*.{js,jsx,ts,tsx,html,jsx,json,css,scss,md}\"",
