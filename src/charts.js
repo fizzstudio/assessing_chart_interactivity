@@ -216,7 +216,8 @@ const props = {
     clickStyle: { strokeWidth: '3px' },
     accessibility: {
       executiveSummary: 'Product Notepads has the highest approval rate correlation with the user group Northeast.',
-      disableValidation: true
+      disableValidation: true,
+      elementsAreInterface: true
     }
   },
   sparkline: {
