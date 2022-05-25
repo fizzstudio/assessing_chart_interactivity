@@ -31,11 +31,11 @@ const years = {
     { Product: 'Art', Region: 'Northeast', Value: 15 },
     { Product: 'Fasteners', Region: 'West', Value: 22 },
     { Product: 'Accessories', Region: 'Midwest', Value: 18 },
-    { Product: 'L', Region: 'West', Value: 20 },
-    { Product: 'M', Region: 'Northeast', Value: 26 },
-    { Product: 'N', Region: 'South', Value: 22 },
-    { Product: 'O', Region: 'Northeast', Value: 14 },
-    { Product: 'P', Region: 'Non-contiguous', Value: 13 }
+    { Product: 'Pencils', Region: 'West', Value: 20 },
+    { Product: 'Erasers', Region: 'Northeast', Value: 26 },
+    { Product: 'Cleaners', Region: 'South', Value: 22 },
+    { Product: 'Sticky Notes', Region: 'Northeast', Value: 14 },
+    { Product: 'Paperclips', Region: 'Non-contiguous', Value: 13 }
   ]
 };
 
