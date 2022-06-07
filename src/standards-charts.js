@@ -106,9 +106,7 @@ return chart;
 
 const swapCharts = e => {
     const chartType = e.target.id.substr(1);
-    console.log("chartType",chartType)
     document.getElementById('render-location').querySelectorAll('.environment').forEach(env => {
-        console.log('env')
         env.classList.add('hidden')
     })
     document.getElementById(chartType).classList.remove('hidden')
