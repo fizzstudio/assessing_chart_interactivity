@@ -7,59 +7,6 @@ const scatterProps = {
 		"elementsAreInterface": false,
 		"disableValidation": true
 	},
-	annotations: [
-		{
-			"note": {
-				label: "24 items",
-				bgPadding: 0,
-				title: "Dense Cluster",
-				align: "left",
-				wrap: 130
-			},
-			"data": {
-				Amount: 202450.96,
-				Count: 1526
-			},
-			"dy": "-50%",
-			"className": "scatter-annotation",
-			"type": "annotationCalloutCircle",
-			"subject": {
-				radius: 18
-			}
-		},
-		{
-			"note": {
-				label: "(14) Items Off-screen",
-				bgPadding: 0,
-				align: "right"
-			},
-			"x": "100%",
-			"y": "50%",
-			"dx": "-8%",
-			"className": "scatter-annotation",
-			"type": "annotationCallout",
-			"connector": {
-				end: "arrow"
-			}
-		},
-		{
-			"note": {
-				label: "(4) Items Off-screen",
-				bgPadding: 0,
-				align: "right",
-				wrap: 150
-			},
-			"x": "100%",
-			"y": "0%",
-			"dx": "-8%",
-			"dy": "8%",
-			"className": "scatter-annotation",
-			"type": "annotationCallout",
-			"connector": {
-				end: "arrow"
-			}
-		}
-	],
 	xAxis: {
 		"visible": true,
 		"gridVisible": false,
