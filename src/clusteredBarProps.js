@@ -6,69 +6,69 @@ const clusteredBarProps = {
 		"elementsAreInterface": false,
 		"disableValidation": true
 	},
-	annotations: [
-		{
-		  "note": {
-			"label": "Group C saw strong gains until Group B was improved.",
-			"bgPadding": {
-			  "top": 0,
-			  "bottom": 0,
-			  "left": 5,
-			  "right": 5
-			},
-			"title": "Temporary Growth",
-			"lineType": "none",
-			"align": "middle",
-			"wrap": 225
-		  },
-		  "accessibilityDescription": "This annotation points to Group C's strong growth starting in 2016 but ending in 2018.",
-		  "y": [
-			22
-		  ],
-		  "x": "18%",
-		  "dy": [
-			56.5
-		  ],
-		  "dx": [
-			"2017",
-			"2016"
-		  ],
-		  "className": "clustered-chart-annotation",
-		  "type": "annotationCalloutElbow"
-		},
-		{
-		  "note": {},
-		  "y": [
-			45
-		  ],
-		  "x": "33.6%",
-		  "dy": [
-			56.5
-		  ],
-		  "dx": [
-			"2017",
-			"2016"
-		  ],
-		  "className": "clustered-chart-annotation",
-		  "type": "annotationCalloutElbow"
-		},
-		{
-		  "note": {},
-		  "y": [
-			78
-		  ],
-		  "x": "52.8%",
-		  "dy": [
-			56.5
-		  ],
-		  "dx": [
-			"2017",
-			"2016"
-		  ],
-		  "className": "clustered-chart-annotation",
-		  "type": "annotationCalloutElbow"
-		}
-	  ],
+	// annotations: [
+	// 	{
+	// 	  "note": {
+	// 		"label": "Group C saw strong gains until Group B was improved.",
+	// 		"bgPadding": {
+	// 		  "top": 0,
+	// 		  "bottom": 0,
+	// 		  "left": 5,
+	// 		  "right": 5
+	// 		},
+	// 		"title": "Temporary Growth",
+	// 		"lineType": "none",
+	// 		"align": "middle",
+	// 		"wrap": 225
+	// 	  },
+	// 	  "accessibilityDescription": "This annotation points to Group C's strong growth starting in 2016 but ending in 2018.",
+	// 	  "y": [
+	// 		22
+	// 	  ],
+	// 	  "x": "18%",
+	// 	  "dy": [
+	// 		56.5
+	// 	  ],
+	// 	  "dx": [
+	// 		"2017",
+	// 		"2016"
+	// 	  ],
+	// 	  "className": "clustered-chart-annotation",
+	// 	  "type": "annotationCalloutElbow"
+	// 	},
+	// 	{
+	// 	  "note": {},
+	// 	  "y": [
+	// 		45
+	// 	  ],
+	// 	  "x": "33.6%",
+	// 	  "dy": [
+	// 		56.5
+	// 	  ],
+	// 	  "dx": [
+	// 		"2017",
+	// 		"2016"
+	// 	  ],
+	// 	  "className": "clustered-chart-annotation",
+	// 	  "type": "annotationCalloutElbow"
+	// 	},
+	// 	{
+	// 	  "note": {},
+	// 	  "y": [
+	// 		78
+	// 	  ],
+	// 	  "x": "52.8%",
+	// 	  "dy": [
+	// 		56.5
+	// 	  ],
+	// 	  "dx": [
+	// 		"2017",
+	// 		"2016"
+	// 	  ],
+	// 	  "className": "clustered-chart-annotation",
+	// 	  "type": "annotationCalloutElbow"
+	// 	}
+	//   ],
 	xAxis: {
 		"visible": true,
 		"gridVisible": false,
@@ -164,7 +164,7 @@ const clusteredBarProps = {
 	dataLabel: {
 		"visible": true,
 		"placement": "auto",
-		"collisionPlacement": "bottom",
+		// "collisionPlacement": "bottom",
 		"labelAccessor": "value",
 		"format": "0,0"
 	},
@@ -177,7 +177,7 @@ const clusteredBarProps = {
 	padding: {
 		"top": 30,
 		"bottom": 50,
-		"right": 50,
+		"right": 10,
 		"left": 60
 	},
 	ordinalAccessor: "item",
