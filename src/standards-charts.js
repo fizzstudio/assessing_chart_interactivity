@@ -85,7 +85,16 @@ if (!chart) {
 chart.classList.add('hidden')
 chart.classList.add('environment')
 Object.keys(props[chartTag]).forEach(prop => {
-    chart[prop] = props[chartTag][prop];
+    let propToTransfer = props[chartTag][prop]
+    if (props[chartTag][prop][0] && props[chartTag][prop][0].date) {
+        propToTransfer = []
+        props[chartTag][prop].forEach(d => {
+            let newDatum = {...d}
+            newDatum.date = new Date(d.date)
+            propToTransfer.push(newDatum)
+        })
+    }
+    chart[prop] = propToTransfer;
 });
 if (events[chartTag]) {
     Object.keys(events[chartTag]).forEach(key => {
@@ -111,7 +120,6 @@ const initPage = () => {
     Object.keys(props).forEach(chartType => {
         inputs += `<input type="radio" id="i${props[chartType].uniqueID}" name="chart" value="${chartType}" class="input-selector" />
         <label for="i${props[chartType].uniqueID}">${chartType}</label><br />`
-
         const chart = chartConstructor(chartType, props[chartType].uniqueID);
         document.getElementById('render-location').appendChild(chart);
     })
