@@ -2,7 +2,8 @@ const parallelProps = {
 	accessibility: {
 		"contextExplanation": "This example of a parallel plot was selected through example list on the sidebar.",
 		"purpose": "Demonstration of a parallel plot built with VCC and minimal properties provided.",
-		"statisticalNotes": "This chart is using dummy data."
+		"statisticalNotes": "This chart is using dummy data.",
+		disableValidation: true
 	},
 	data: [
 		{

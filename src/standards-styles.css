@@ -1,11 +1,4 @@
-.heat-map-dataLabel {
-    pointer-events: none;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
+
   body {
     margin: 0 auto;
     max-width: 60em;
@@ -15,6 +8,7 @@
     padding-bottom: 50px;
     text-rendering: optimizeLegibility;
     font-kerning: normal;
+    font-family: 'Open Sans', sans-serif;
   }
   
   * {
@@ -48,7 +42,14 @@
     clear: both;
     visibility: hidden;
   }
-
+  .heat-map-dataLabel {
+    pointer-events: none;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
 .clustered-chart-annotation .connector {
   stroke: #972800;
 }

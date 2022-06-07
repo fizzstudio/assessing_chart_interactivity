@@ -23,13 +23,14 @@ const dumbbellProps = {
 		"tickInterval": 1
 	},
 	mainTitle: "Difference between A and B over time",
-	subTitle: "Difference in amount between group A and B over a 12 month period.",
+	subTitle: "Difference in amount between group A and B over a 6 month period.",
 	padding: {
 		"bottom": 50,
-		"left": 50,
-		"right": 75,
+		"left": 80,
+		"right": 15,
 		"top": 20
 	},
+	width: 550,
 	data: [
 		{
 			"date": "2016-01-01",
@@ -62,36 +63,6 @@ const dumbbellProps = {
 			"value": 0.01184192554
 		},
 		{
-			"date": "2016-07-01",
-			"category": "Group A",
-			"value": 0.001578636197
-		},
-		{
-			"date": "2016-08-01",
-			"category": "Group A",
-			"value": -0.008311163096
-		},
-		{
-			"date": "2016-09-01",
-			"category": "Group A",
-			"value": -0.003262148898
-		},
-		{
-			"date": "2016-10-01",
-			"category": "Group A",
-			"value": -0.004651933407
-		},
-		{
-			"date": "2016-11-01",
-			"category": "Group A",
-			"value": 0.007772849978
-		},
-		{
-			"date": "2016-12-01",
-			"category": "Group A",
-			"value": 0.01430982982
-		},
-		{
 			"date": "2016-01-01",
 			"category": "Group B",
 			"value": 0.016370994739
@@ -120,36 +91,6 @@ const dumbbellProps = {
 			"date": "2016-06-01",
 			"category": "Group B",
 			"value": 0.014484192554
-		},
-		{
-			"date": "2016-07-01",
-			"category": "Group B",
-			"value": 0.010778636197
-		},
-		{
-			"date": "2016-08-01",
-			"category": "Group B",
-			"value": 0.004811163096
-		},
-		{
-			"date": "2016-09-01",
-			"category": "Group B",
-			"value": 0.010462148898
-		},
-		{
-			"date": "2016-10-01",
-			"category": "Group B",
-			"value": 0.012051933407
-		},
-		{
-			"date": "2016-11-01",
-			"category": "Group B",
-			"value": 0.016872849978
-		},
-		{
-			"date": "2016-12-01",
-			"category": "Group B",
-			"value": 0.01970982982
 		}
 	],
 	ordinalAccessor: "date",

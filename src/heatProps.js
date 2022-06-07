@@ -28,7 +28,6 @@ const heatProps = {
     valueAccessor: 'Value',
     colorPalette: 'sequential_grey', // sequential_grey
     uniqueID: 'heat-map',
-    dataLabel: { visible: false },
     legend: { visible: true, type: 'default' },
     yAxis: { visible: true, label: '' },
     xAxis: { label: '', visible: true },
