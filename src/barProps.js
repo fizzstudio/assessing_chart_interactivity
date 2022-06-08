@@ -124,11 +124,12 @@ const barProps = {
 	clickStyle: {
 		"color": "",
 		"stroke": "categorical_blue",
-		"strokeWidth": "1.5px",
+		"strokeWidth": 2,
 		"dashed": "4 2"
 	},
 	hoverStyle: {
-		"color": ""
+		"color": "",
+		"strokeWidth": 2
 	},
 	cursor: "pointer",
 	interactionKeys: [

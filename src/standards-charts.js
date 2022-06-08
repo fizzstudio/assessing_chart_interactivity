@@ -5,19 +5,31 @@ const sparklineFix = (d) => {
     })
 }
 const heatClick = d => {
-d.target.clickHighlight =
-    d.target.clickHighlight && d.target.clickHighlight[0] === d.detail.data ? [] : [d.detail.data];
+    d.target.clickHighlight =
+        d.target.clickHighlight && d.target.clickHighlight[0] === d.detail.data ? [] : [d.detail.data];
 document.getElementById('aria-live').innerHTML = !d.target.clickHighlight.length
     ? 'Selected data has been removed.'
     : d.detail.data.Value > 0.95
-    ? 'Success: Highest approval correlation has been selected.'
+    ? 'Highest approval correlation has been selected.'
     : `${d.detail.data.Note} has been selected.`;
 };
-const heatHover = d => {
-d.target.hoverHighlight = d.detail.data;
+
+const genericClick = d => {
+    const clickArray = [...(d.target.clickHighlight || [])]
+    const i = clickArray.indexOf(d.detail.data)
+    if (i < 0) {
+        clickArray.push(d.detail.data)
+    } else {
+        clickArray.splice(i,1)
+    }
+    d.target.clickHighlight = clickArray
+    document.getElementById('aria-live').innerHTML = `${clickArray.length} clicked item${clickArray.length !== 1 ? 's' : ''}.`
 };
-const heatOut = d => {
-d.target.hoverHighlight = '';
+const genericHover = d => {
+    d.target.hoverHighlight = d.detail.data;
+};
+const genericMouseOut = d => {
+    d.target.hoverHighlight = '';
 };
 
 const props = {
@@ -38,42 +50,24 @@ const props = {
 
 const events = {
     'bar-chart': {
-        clickEvent: d => {
-            console.log("clickEvent",d)
-        },
-        hoverEvent: d => {
-            console.log("hoverEvent",d)
-        },
-        mouseOutEvent: d => {
-            console.log("mouseOutEvent",d)
-        }
+        clickEvent: genericClick,
+        hoverEvent: genericHover,
+        mouseOutEvent: genericMouseOut
     },
     'heat-map': {
         clickEvent: heatClick,
-        hoverEvent: heatHover,
-        mouseOutEvent: heatOut
+        hoverEvent: genericHover,
+        mouseOutEvent: genericMouseOut
     },
     'circle-packing': {
-        clickEvent: d => {
-            console.log("clickEvent",d)
-        },
-        hoverEvent: d => {
-            console.log("hoverEvent",d)
-        },
-        mouseOutEvent: d => {
-            console.log("mouseOutEvent",d)
-        }
+        clickEvent: genericClick,
+        hoverEvent: genericHover,
+        mouseOutEvent: genericMouseOut
     },
     'world-map': {
-        clickEvent: d => {
-            console.log("clickEvent",d)
-        },
-        hoverEvent: d => {
-            console.log("hoverEvent",d)
-        },
-        mouseOutEvent: d => {
-            console.log("mouseOutEvent",d)
-        }
+        clickEvent: genericClick,
+        hoverEvent: genericHover,
+        mouseOutEvent: genericMouseOut
     }
 }
 
@@ -110,6 +104,7 @@ const swapCharts = e => {
         env.classList.add('hidden')
     })
     document.getElementById(chartType).classList.remove('hidden')
+    document.getElementById('aria-live').innerHTML = `${e.target.value} has loaded.`
 };
 
 const initPage = () => {
