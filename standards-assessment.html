@@ -6,6 +6,7 @@
     <link href="src/standards-styles.css" rel="stylesheet" />
   </head>
   <body>
+    <style id="flexible-style"></style>
     <header>
       <nav>
         <h2>Environments</h2>
@@ -20,7 +21,12 @@
         charts and graphs. We are evaluating a series of interactive charts and graphs with a standards- and research-based assessment, <a href="https://chartability.fizz.studio/">Chartability</a>. The <a href="https://chartability.github.io/POUR-CAF/#thetests">specific criteria used in this evaluation may be found here</a>.
       </p>
       <p>In order to ensure fairness in evaluation, all assessments made are done by a pair: a primary analyst and then through a second opinion by another analyst. Consensus is reached when determining the outcome of the evaluation results. In addition, some tests were performed by experts in a given assistive technology.</p>
-      <p>For analysts: Make a selection in the previous navigation menu "Environments" in order to render it below:</p>
+      <p>For analysts: Make a selection in the previous navigation menu "Environments" in order to render it below.</p>
+      <div>
+        <p>You also may wish to toggle the text shown to screen readers, in order to test reading and grade level.</p>
+        <label for="toggle">Toggle showing SR text sections</label>
+        <input type="checkbox" id="toggle" name="toggle" />
+      </div>
       <div id="render-location"></div>
       <div id="aria-live" aria-live="polite"></div>
     </main>

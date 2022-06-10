@@ -1,3 +1,17 @@
+const styleInnerHTML = `
+.vcl-accessibility-instructions {
+    position: relative !important;
+}
+.screen-reader-info {
+    position: relative !important;
+    left: 0px !important;
+    top: 0px !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: auto !important;
+}
+`
+
 const sparklineFix = (d) => {
     document.getElementById('sparkline').querySelectorAll('circle').forEach(circle => {
         circle.removeAttribute('tabindex')
@@ -107,6 +121,11 @@ const swapCharts = e => {
     document.getElementById('aria-live').innerHTML = `${e.target.value} has loaded.`
 };
 
+const toggleSRText = e => {
+    console.log(e.target.checked)
+    document.getElementById("flexible-style").innerHTML = e.target.checked ? styleInnerHTML : ''
+}
+
 const initPage = () => {
     let inputs = ''
 
@@ -116,6 +135,8 @@ const initPage = () => {
         const chart = chartConstructor(chartType, props[chartType].uniqueID);
         document.getElementById('render-location').appendChild(chart);
     })
+
+    document.getElementById('toggle').addEventListener('change', toggleSRText);
 
     document.getElementById("inputs").innerHTML = inputs
     inputs = document.querySelectorAll('.input-selector');
