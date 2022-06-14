@@ -4,7 +4,7 @@ const alluvialProps = {
 		"contextExplanation": "This example of an alluvial diagram was selected through example list on the sidebar.",
 		"purpose": "Alluvial diagram showing value mapping between Region and Ranking.",
 		"structureNotes": "Links are defined to visually map data values between Regions and Rankings.",
-		"elementsAreInterface": true,
+		"elementsAreInterface": false,
 		"disableValidation": true
 	},
 	mainTitle: "Region to rank mapping",

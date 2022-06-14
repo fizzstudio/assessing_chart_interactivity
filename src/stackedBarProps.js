@@ -3,7 +3,7 @@ const stackedBarProps = {
 		"contextExplanation": "This example of a stacked bar chart was selected through example list on the sidebar.",
 		"purpose": "Stacked bar chart showing group count by year.",
 		"structureNotes": "A different color and pattern is used to represent each group. Each stack of bars shows the count for each group in that year.",
-		"elementsAreInterface": true,
+		"elementsAreInterface": false,
 		"disableValidation": true
 	},
 	xAxis: {
