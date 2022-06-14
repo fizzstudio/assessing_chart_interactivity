@@ -5,7 +5,7 @@ const pieProps = {
 		"purpose": "Pie chart depicting share of total across key categories.",
 		"structureNotes": "A different color and pattern is used to represent each category.",
 		"statisticalNotes": "This chart is using dummy data. The spread of share is relatively even across the groups.",
-		"elementsAreInterface": true,
+		"elementsAreInterface": false,
 		"disableValidation": true
 	},
 	centerTitle: "Share",
